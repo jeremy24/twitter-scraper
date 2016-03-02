@@ -94,44 +94,44 @@ def test():
     db = Database()
     words = set()
 
-    # animals = ["cat", "dog", "bird", "giraffe", "horse", "mouse", "gecko"]
-    # things = ["tv", "car", "table", "chair", "remote", "calculator", "cup", "bowl"]
-    # colors = ["red", "green", "blue", "purple", "brown", "white", "neon"]
-    # people = ["me", "trump", "donald", "bush", "carly", "bernie", "obama"]
-    # school = ["class", "teacher", "prof", "professor", "subject", "grade"]
-    # items = ["pen", "zipper", "hand", "rope", "cord", "computer", "laptop", "knife"]
-    #
-    # words = words.union(animals, things, colors, people, school, items)
-    #
-    # temps = ["cold", "hot", "warm"]
-    # weather = ["rain", "sun", "sunny", "damp", "foggy", "snow", "snowing", "fog"]
-    # letters = ["a", "b", "c", "d", "e", "f", "g", "h"]
-    # brands = ["samsung", "nike", "atari", "apple", "android", "google", "wexford", "kenmore"]
-    # electronics = ["phone", "psp", "xbox", "360", "xboxone", "ps4", "ps3", "ds", "ipod"]
-    # drinks = ["water", "gatorade", "milk", "oj", "creamer", "coffee", "tea", "hotchocolate", "koolaid"]
-    # roles = ["wizard", "knight", "monk", "fighter", "priest", "monster", "strider", "archer"]
-    # clothes = ["shirt", "pants", "shirts", "shoes", "shoe", "glove", "gloves", "hat", "hats"]
-    # food = ["rice", "noodles", "bread", "lettuce", "tomato", "grape", "apple", "orange", "cake"]
-    #
-    # words = words.union(temps, weather, letters, brands, electronics, drinks, roles, clothes, food)
-    #
-    # a = ["age", "ask", "base", "baby", "bay", "child", "color", "copy", "paste", "cut"]
-    # b = ["dried", "inch", "human", "happy", "forest", "fire", "french", "german"]
-    # c = ["product", "reach", "info", "late", "larger", "lost", "log", "tree", "grass"]
-    # d = ["machine", "car", "drier", "driver", "screw", "bolt", "nut", "recording", "lawn"]
-    # e = ["record", "lower", "middle", "man", "first", "second", "third", "fourth", "fifth"]
-    # f = ["treasure", "gold", "money", "ring", "jewel", "ruby", "gem", "diamond", "emerald"]
-    # g = ["south", "north", "east", "west", "shape", "square", "circle", "single", "couple"]
-    #
-    # words = words.union(a, b, c, d, e, f, g)
+    animals = ["cat", "dog", "bird", "giraffe", "horse", "mouse", "gecko"]
+    things = ["tv", "car", "table", "chair", "remote", "calculator", "cup", "bowl"]
+    colors = ["red", "green", "blue", "purple", "brown", "white", "neon"]
+    people = ["me", "trump", "donald", "bush", "carly", "bernie", "obama"]
+    school = ["class", "teacher", "prof", "professor", "subject", "grade"]
+    items = ["pen", "zipper", "hand", "rope", "cord", "computer", "laptop", "knife"]
+
+    words = words.union(animals, things, colors, people, school, items)
+
+    temps = ["cold", "hot", "warm"]
+    weather = ["rain", "sun", "sunny", "damp", "foggy", "snow", "snowing", "fog"]
+    letters = ["a", "b", "c", "d", "e", "f", "g", "h"]
+    brands = ["samsung", "nike", "atari", "apple", "android", "google", "wexford", "kenmore"]
+    electronics = ["phone", "psp", "xbox", "360", "xboxone", "ps4", "ps3", "ds", "ipod"]
+    drinks = ["water", "gatorade", "milk", "oj", "creamer", "coffee", "tea", "hotchocolate", "koolaid"]
+    roles = ["wizard", "knight", "monk", "fighter", "priest", "monster", "strider", "archer"]
+    clothes = ["shirt", "pants", "shirts", "shoes", "shoe", "glove", "gloves", "hat", "hats"]
+    food = ["rice", "noodles", "bread", "lettuce", "tomato", "grape", "apple", "orange", "cake"]
+
+    words = words.union(temps, weather, letters, brands, electronics, drinks, roles, clothes, food)
+
+    a = ["age", "ask", "base", "baby", "bay", "child", "color", "copy", "paste", "cut"]
+    b = ["dried", "inch", "human", "happy", "forest", "fire", "french", "german"]
+    c = ["product", "reach", "info", "late", "larger", "lost", "log", "tree", "grass"]
+    d = ["machine", "car", "drier", "driver", "screw", "bolt", "nut", "recording", "lawn"]
+    e = ["record", "lower", "middle", "man", "first", "second", "third", "fourth", "fifth"]
+    f = ["treasure", "gold", "money", "ring", "jewel", "ruby", "gem", "diamond", "emerald"]
+    g = ["south", "north", "east", "west", "shape", "square", "circle", "single", "couple"]
+
+    words = words.union(a, b, c, d, e, f, g)
 
     words = sorted(words)
 
-    # flagged = db.get_flagged_words()
-    # for flag in flagged:
-    #     flag = str(flag)
-    #     if flag not in words:
-    #         words.append(flag)
+    flagged = db.get_flagged_words()
+    for flag in flagged:
+        flag = str(flag)
+        if flag not in words:
+            words.append(flag)
 
     print("Searching for " + str(words.__len__()) + " words")
 

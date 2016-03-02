@@ -188,6 +188,7 @@ class Database:
         tweet = str(tweet)
         words = tweet.split(" ")
         for word in words:
+
             self.word_cache.append(word)
 
         if self.word_cache.__len__() > self.MAX_WORD_CACHE_SIZE:
