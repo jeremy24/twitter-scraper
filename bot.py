@@ -12,6 +12,9 @@ from datetime import datetime
 from os import urandom
 
 
+import ssl_fix
+
+
 class Bot:
     def __init__(self):
         print "started"
